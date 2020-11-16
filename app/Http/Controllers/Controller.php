@@ -20,7 +20,6 @@ class Controller extends BaseController
         $url = '"https://taller2tis.s3.amazonaws.com/';
         echo '<img src=' . $url . $randomNumber . '.jpg" width="500" height="600"/>';
         //echo "<p>server_ip: " . inet_ntop(gethostbyname(gethostname())) . "</p>";
-        echo "<p>server_ip: " . getenv('DOCKER_CID') . "</p>";
-        echo getenv('DOCKER_CID');
+        echo "<p>server_ip: " . getenv('SERVER_ADDR') . "</p>";
     }
 }
