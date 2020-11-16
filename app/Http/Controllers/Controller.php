@@ -21,7 +21,6 @@ class Controller extends BaseController
         echo '<img src=' . $url . $randomNumber . '.jpg" width="500" height="600"/>';
         //echo "<p>server_ip: " . inet_ntop(gethostbyname(gethostname())) . "</p>";
         echo "<p>server_ip: " . getenv('DOCKER_CID') . "</p>";
-        
-
+        echo getenv('DOCKER_CID');
     }
 }
