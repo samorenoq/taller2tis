@@ -16,10 +16,11 @@ class Controller extends BaseController
 
     public function index()
     {
-        $totalQuotes = (count(Controller::$quotes));
-        $randomNumber = (rand(0,($totalQuotes-1)));
-        $randomQuote = Controller::$quotes[$randomNumber];
+        $randomNumber = (rand(1,15));
+        $url = '"https://taller2tis.s3.amazonaws.com/';
+        echo '<img src=' . $url . $randomNumber . '.jpg"/>';
+        echo "<p>server_ip: " . gethostbyname(gethostname()) . "</p>";
+        #return response()->json(['image' => "https://taller2tis.s3.amazonaws.com/" . $randomNumber .".jpg", 'server_ip' => gethostbyname(gethostname())]); 
 
-        return response()->json(['quote' => $randomQuote, 'server_ip' => gethostbyname(gethostname())]); 
     }
 }

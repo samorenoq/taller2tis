@@ -15,6 +15,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/index', [
-    'as' => 'index', 'uses' => 'Controller@index'
+$router->get('/random-images', [
+    'as' => 'random-images', 'uses' => 'Controller@index'
 ]);
