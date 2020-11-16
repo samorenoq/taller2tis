@@ -19,7 +19,8 @@ class Controller extends BaseController
         $randomNumber = (rand(1,15));
         $url = '"https://taller2tis.s3.amazonaws.com/';
         echo '<img src=' . $url . $randomNumber . '.jpg" width="500" height="600"/>';
-        echo "<p>server_ip: " . inet_ntop(gethostbyname(gethostname())) . "</p>";
+        #echo "<p>server_ip: " . inet_ntop(gethostbyname(gethostname())) . "</p>";
+        echo "<p>server_ip: " . $_SERVER('SERVER_ADDR') . "</p>";
         
 
     }
