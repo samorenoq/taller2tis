@@ -18,9 +18,9 @@ class Controller extends BaseController
     {
         $randomNumber = (rand(1,15));
         $url = '"https://taller2tis.s3.amazonaws.com/';
-        echo '<img src=' . $url . $randomNumber . '.jpg"/>';
-        echo "<p>server_ip: " . gethostbyname(gethostname()) . "</p>";
-        #return response()->json(['image' => "https://taller2tis.s3.amazonaws.com/" . $randomNumber .".jpg", 'server_ip' => gethostbyname(gethostname())]); 
+        echo '<img src=' . $url . $randomNumber . '.jpg" width="500" height="600"/>';
+        echo "<p>server_ip: " . inet_ntop(gethostbyname(gethostname())) . "</p>";
+        
 
     }
 }
